@@ -1,3 +1,73 @@
+// ===== FRASES MOTIVACIONAIS ROTATIVAS =====
+const motivationalPhrases = [
+  'Transforme seu corpo, sua energia e sua vida.',
+  'Acredite no seu potencial!',
+  'O seu futuro começa agora!',
+  'Desafie seus limites todos os dias.',
+  'Você é mais forte do que imagina!',
+  'Resultados incríveis começam com uma decisão.'
+];
+
+function rotateMotivationalPhrase() {
+  const phraseElement = document.querySelector('.parallax-2 h3');
+  if (!phraseElement) return;
+  let idx = 0;
+  setInterval(() => {
+    phraseElement.textContent = motivationalPhrases[idx];
+    idx = (idx + 1) % motivationalPhrases.length;
+  }, 3500);
+}
+
+window.addEventListener('DOMContentLoaded', rotateMotivationalPhrase);
+
+// ===== EFEITO DE PARTÍCULAS NO FUNDO =====
+function createParticles() {
+  const particlesContainer = document.createElement('div');
+  particlesContainer.className = 'particles-bg';
+  Object.assign(particlesContainer.style, {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+    pointerEvents: 'none',
+    zIndex: 0,
+    overflow: 'hidden',
+  });
+  document.body.appendChild(particlesContainer);
+
+  for (let i = 0; i < 36; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    const size = Math.random() * 8 + 4;
+    Object.assign(particle.style, {
+      position: 'absolute',
+      width: `${size}px`,
+      height: `${size}px`,
+      borderRadius: '50%',
+      background: 'linear-gradient(135deg, #00ffd0, #ff2e6e)',
+      opacity: Math.random() * 0.5 + 0.2,
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      filter: 'blur(0.5px)',
+      transition: 'all 1s',
+    });
+    particlesContainer.appendChild(particle);
+  }
+
+  function animateParticles() {
+    const particles = particlesContainer.querySelectorAll('.particle');
+    particles.forEach(particle => {
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+      particle.style.opacity = Math.random() * 0.5 + 0.2;
+    });
+  }
+  setInterval(animateParticles, 3500);
+}
+
+window.addEventListener('DOMContentLoaded', createParticles);
+
 $(document).ready(function () {
     // Menu mobile toggle
     $(".menubar").click(function () {
@@ -40,9 +110,17 @@ function typewriterEffect(element, text, speed = 100) {
 
 // Ativar typewriter quando a página carrega
 window.addEventListener('load', function() {
-  const titleElement = document.querySelector('.parallax-1 h1');
+  const titleElement = document.querySelector('.hero-title');
   if (titleElement) {
-    typewriterEffect(titleElement, 'Luan Gs', 100);
+    typewriterEffect(titleElement, 'Thiago Bazillio', 80);
+  }
+  // Animação de destaque no botão CTA
+  const ctaBtn = document.querySelector('.btn-cta');
+  if (ctaBtn) {
+    setInterval(() => {
+      ctaBtn.style.boxShadow = '0 0 24px 6px #00ffd088';
+      setTimeout(() => ctaBtn.style.boxShadow = '0 2px 12px #0005', 600);
+    }, 2000);
   }
 });
 

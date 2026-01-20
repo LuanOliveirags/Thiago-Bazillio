@@ -181,6 +181,11 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
   justify-content: center;
   gap: 48px;
   padding: 32px 48px;
+  max-width: 98vw;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .sobre-thiago-img {
   width: 220px;
@@ -202,6 +207,26 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
   font-size: 20px;
   font-family: 'Montserrat', Arial, sans-serif;
   margin-bottom: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+@media (max-width: 700px) {
+  .sobre-thiago-box {
+    flex-direction: column;
+    gap: 24px;
+    padding: 18px 4vw;
+    max-width: 100vw;
+  }
+  .sobre-thiago-img {
+    width: 160px;
+    height: 160px;
+  }
+  .sobre-thiago-nome {
+    font-size: 24px;
+  }
+  .sobre-thiago-desc {
+    font-size: 16px;
+  }
 }
 /* ===== VARIÁVEIS E RESET ===== */
 :root {
