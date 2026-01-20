@@ -75,7 +75,7 @@
             <h2 class="destaque-titulo">PROTOCOLO DE HIPERTROFIA FEMININA 1</h2>
             <div class="destaque-preco">R$ 49,90</div>
             <div class="destaque-btn-wrap">
-              <a href="https://seulinkdecompra.com" target="_blank" rel="noopener noreferrer" class="btn-comprar">COMPRAR</a>
+              <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" rel="noopener noreferrer" class="btn-comprar">COMPRAR</a>
             </div>
           </section>
         </blockquote>
@@ -83,20 +83,39 @@
       <!--FINAL SECTION 2-->
 
       <!--SECTION COMO FUNCIONA-->
-      <section class="como-funciona" aria-label="Como funciona a consultoria">
-        <h2 class="como-title">COMO FUNCIONA</h2>
-        <h3 class="como-sub">Frustrada por não conseguir o tão desejado corpo?</h3>
-        <h1 class="como-headline">VENHA FAZER PARTE DESSE TIME DE RESULTADOS!</h1>
-        <p class="como-desc">
-          Nesse formato de consultoria, você terá acesso ao aplicativo de treinos e seu conteúdo com vídeos dos exercícios, espaço para anotações das suas cargas.
+      <section class="como-funciona" aria-label="Como funciona a consultoria" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+        <h2 class="como-title" style="font-size:2.2rem; margin-bottom:0.5em; letter-spacing:2px; text-align:center;">COMO <span style='color:#00ffd0;'>FUNCIONA</span></h2>
+        <div id="headline-mobile" class="headline-mobile" style="font-size:1.1rem; color:#ff2e6e; margin-bottom:0.7em; font-weight:600; text-align:center;"></div>
+        <h1 class="como-headline" style="font-size:1.5rem; color:#00ffd0; margin-bottom:0.7em; text-shadow:0 2px 8px #000; text-align:center;">VENHA FAZER PARTE DESSE TIME DE RESULTADOS!</h1>
+        <p class="como-desc" style="font-size:1.1rem; color:#fff; margin-bottom:0.7em; line-height:1.5; text-align:center;">
+          Consultoria 100% online, com acesso ao app exclusivo, vídeos dos exercícios e espaço para anotar suas cargas.<br>
+          <span style="color:#00ffd0; font-weight:600;">Fácil, prático e motivador!</span>
         </p>
-        <p class="como-protocolo">
-          Protocolo de treino voltado pra você que deseja ganhar massa muscular, treino com ênfase em melhorar principalmente GLÚTEOS e coxas, mas sem deixar de lado uma atenção especial também ao seus treinos de superiores. Protocolo dividido em A/B/C/D/E 🔥🔥
+        <p class="como-protocolo" style="font-size:0.98rem; color:#ccc; margin-bottom:1.2em; text-align:center;">
+          Protocolo focado em <b>glúteos e coxas</b>, sem esquecer dos superiores. Divisão inteligente: A/B/C/D/E.<br>Resultados reais, autoestima renovada!
         </p>
-        <div class="como-btn-wrap">
-          <a href="https://seulinkdecompra.com" target="_blank" rel="noopener noreferrer" class="btn-comprar">COMPRAR</a>
+        <div class="como-btn-wrap" style="justify-content:center; margin-bottom:0; width:100%; display:flex;">
+          <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" rel="noopener noreferrer" class="btn-comprar" style="width:100%;max-width:340px;display:inline-block;">COMPRAR</a>
         </div>
       </section>
+      <script>
+        // Frases motivacionais rotativas para mobile
+        const frasesMobile = [
+          'Frustrada por não conseguir o tão desejado corpo?',
+          'Chega de treinos sem resultado!',
+          'Seu corpo, sua conquista!',
+          'Transforme sua rotina, transforme seu corpo!'
+        ];
+        let idxMobile = 0;
+        function rotateHeadlineMobile() {
+          const el = document.getElementById('headline-mobile');
+          if (!el) return;
+          el.textContent = frasesMobile[idxMobile];
+          idxMobile = (idxMobile + 1) % frasesMobile.length;
+        }
+        setInterval(rotateHeadlineMobile, 3000);
+        document.addEventListener('DOMContentLoaded', rotateHeadlineMobile);
+      </script>
 
       <section class="conteudo1" aria-label="Seção de conhecimentos e habilidades">
         <h2>Resultados Incríveis</h2>
@@ -159,7 +178,7 @@
           </details>
         </div>
         <div class="faq-btn-wrap">
-          <a href="https://seulinkdecompra.com" target="_blank" rel="noopener noreferrer" class="btn-comprar">COMPRAR</a>
+          <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" rel="noopener noreferrer" class="btn-comprar">COMPRAR</a>
         </div>
       </section>
 
