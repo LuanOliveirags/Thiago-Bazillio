@@ -1,3 +1,64 @@
+.image-modal-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.image-modal-caption {
+  margin-top: 18px;
+  color: #fff;
+  font-size: 1.25rem;
+  text-align: center;
+  max-width: 90vw;
+  background: rgba(24,28,47,0.7);
+  border-radius: 10px;
+  padding: 12px 18px 10px 18px;
+  box-shadow: 0 2px 12px #0006;
+  font-family: 'Montserrat', 'Raleway', Arial, sans-serif;
+}
+/* Modal de imagem ampliada */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 16, 32, 0.92);
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+.image-modal-content {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 18px;
+  box-shadow: 0 0 32px #00ffd088, 0 0 64px #ff2e6e44;
+  background: #181c2f;
+  object-fit: contain;
+  animation: zoomInImg 0.3s;
+}
+.image-modal-close {
+  position: absolute;
+  top: 32px;
+  right: 48px;
+  color: #ff2e6e;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2100;
+  text-shadow: 0 2px 12px #000a;
+  transition: color 0.2s;
+}
+.image-modal-close:hover {
+  color: #00ffd0;
+}
+@keyframes zoomInImg {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
 /* ===== CENTRALIZAÇÃO DA SEÇÃO COMO FUNCIONA ===== */
 .como-funciona {
   display: flex;

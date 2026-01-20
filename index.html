@@ -87,13 +87,14 @@
 
         <div class="skills-container">
           <article class="skill-card" data-skill="html">
-            <img class="skill-full" src="img/html.png" alt="Ícone HTML5">
+            <img class="skill-full" src="img/html.png" alt="Quando iniciamos os treinos da Mari, o foco foi aumentar o volume muscular e reduzir o percentual de gordura. O resultado: pernas mais volumosas, cintura mais marcada e uma silhueta mais harmônica. Treino certo + dieta da @juliasousanutri = mais massa magra e menos gordura. Quer evoluir também? Chama e vamos montar seu plano!">
           </article>
           <article class="skill-card" data-skill="js">
-            <img class="skill-full" src="img/js.png" alt="Ícone JavaScript">
+            <img class="skill-full" src="img/js.png" alt="@lauracadaval
+Evolução constante🔥">
           </article>
           <article class="skill-card" data-skill="css">
-            <img class="skill-full" src="img/CSS.png" alt="Ícone CSS3">
+            <img class="skill-full" src="img/CSS.png" alt="@gineeves">
           </article>
         </div>
       </section>
@@ -183,6 +184,14 @@
         <p>&copy; 2026 Luan Gs - Todos os direitos reservados</p>
     </footer>
     <!-- FINAL DO RODA-PÉ -->
+    <!-- MODAL DE IMAGEM AMPLIADA -->
+    <div id="imageModal" class="image-modal">
+      <span class="image-modal-close" id="imageModalClose">&times;</span>
+      <div class="image-modal-inner">
+        <img class="image-modal-content" id="imageModalImg" alt="Imagem ampliada">
+        <div class="image-modal-caption" id="imageModalCaption"></div>
+      </div>
+    </div>
      
 
     <script 
@@ -191,6 +200,43 @@
     crossorigin="anonymous"
     ></script>
     <script src="js/script.js"></script>
+
+    <script>
+      // Modal de imagem ampliada com legenda
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.skill-card img').forEach(function(img) {
+          img.style.cursor = 'zoom-in';
+          img.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var modal = document.getElementById('imageModal');
+            var modalImg = document.getElementById('imageModalImg');
+            var modalCaption = document.getElementById('imageModalCaption');
+            modal.style.display = 'flex';
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            // Usa o alt da imagem como legenda
+            modalCaption.textContent = this.alt;
+            document.body.style.overflow = 'hidden';
+          });
+        });
+        document.getElementById('imageModalClose').onclick = function() {
+          document.getElementById('imageModal').style.display = 'none';
+          document.body.style.overflow = 'auto';
+        };
+        document.getElementById('imageModal').onclick = function(e) {
+          if (e.target === this) {
+            this.style.display = 'none';
+            document.body.style.overflow = 'auto';
+          }
+        };
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+            document.getElementById('imageModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+          }
+        });
+      });
+    </script>
 
     <script>
       // Dados das habilidades com descrições completas
