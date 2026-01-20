@@ -792,6 +792,26 @@ section.module.parallax-2 h4 {
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  .skill-full {
+    height: 160px;
+    min-height: 120px;
+    max-height: 220px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-full {
+    height: 120px;
+    min-height: 100px;
+    max-height: 160px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 .skill-card {
   padding: 0;
   width: 200px;
