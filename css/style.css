@@ -876,18 +876,24 @@ section.module.parallax-2 h4 {
 }
 
 .skill-full {
-  width: 100%;
-  height: 200px;
+  width: 240px !important;
+  height: 240px !important;
   object-fit: cover;
   display: block;
-  border-radius: 12px;
+  border-radius: 16px;
   box-sizing: border-box;
+  box-shadow: 0 4px 24px #00ffd055, 0 2px 8px #ff2e6e33;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.skill-card:hover .skill-full {
+  transform: scale(1.06) rotate(-1deg);
+  box-shadow: 0 8px 32px #ff2e6e55, 0 4px 16px #00ffd055;
 }
 
 .skill-card {
   padding: 0;
-  width: 200px;
-  height: 200px;
+  width: 260px;
+  height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
