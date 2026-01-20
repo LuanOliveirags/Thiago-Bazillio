@@ -1,3 +1,16 @@
+/* ===== CENTRALIZAÇÃO DA SEÇÃO COMO FUNCIONA ===== */
+.como-funciona {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+#headline-mobile {
+  text-align: center;
+  width: 100%;
+}
 /* Subtítulo centralizado para a seção COMO FUNCIONA */
 .como-sub {
   text-align: center;
