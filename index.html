@@ -11,27 +11,6 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Raleway:wght@300&display=swap"
     rel="stylesheet"
     />
-    <style>
-      .particles-bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        pointer-events: none;
-        z-index: 0;
-        overflow: hidden;
-      }
-      .particle {
-        pointer-events: none;
-        will-change: left, top, opacity;
-        mix-blend-mode: lighten;
-      }
-      .hero-center, .module.parallax.parallax-1 {
-        position: relative;
-        z-index: 1;
-      }
-    </style>
 </head>
 
 
@@ -83,39 +62,23 @@
       <!--FINAL SECTION 2-->
 
       <!--SECTION COMO FUNCIONA-->
-      <section class="como-funciona" aria-label="Como funciona a consultoria" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
-        <h2 class="como-title" style="font-size:2.2rem; margin-bottom:0.5em; letter-spacing:2px; text-align:center;">COMO <span style='color:#00ffd0;'>FUNCIONA</span></h2>
-        <div id="headline-mobile" class="headline-mobile" style="font-size:1.1rem; color:#ff2e6e; margin-bottom:0.7em; font-weight:600; text-align:center;"></div>
-        <h1 class="como-headline" style="font-size:1.5rem; color:#00ffd0; margin-bottom:0.7em; text-shadow:0 2px 8px #000; text-align:center;">VENHA FAZER PARTE DESSE TIME DE RESULTADOS!</h1>
-        <p class="como-desc" style="font-size:1.1rem; color:#fff; margin-bottom:0.7em; line-height:1.5; text-align:center;">
+      <section class="como-funciona" aria-label="Como funciona a consultoria">
+        <h2 class="como-title">COMO <span style='color:#00ffd0;'>FUNCIONA</span></h2>
+        <div class="como-sub">Chega de treinos sem resultado!</div>
+        <div id="headline-mobile" class="headline-mobile"></div>
+        <h1 class="como-headline">VENHA FAZER PARTE DESSE TIME DE RESULTADOS!</h1>
+        <p class="como-desc">
           Consultoria 100% online, com acesso ao app exclusivo, vídeos dos exercícios e espaço para anotar suas cargas.<br>
           <span style="color:#00ffd0; font-weight:600;">Fácil, prático e motivador!</span>
         </p>
-        <p class="como-protocolo" style="font-size:0.98rem; color:#ccc; margin-bottom:1.2em; text-align:center;">
+        <p class="como-protocolo">
           Protocolo focado em <b>glúteos e coxas</b>, sem esquecer dos superiores. Divisão inteligente: A/B/C/D/E.<br>Resultados reais, autoestima renovada!
         </p>
-        <div class="como-btn-wrap" style="justify-content:center; margin-bottom:0; width:100%; display:flex;">
-          <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" rel="noopener noreferrer" class="btn-comprar" style="width:100%;max-width:340px;display:inline-block;">COMPRAR</a>
+        <div class="como-btn-wrap">
+          <a href="https://www.mfitpersonal.com.br/index?acao=page&tipo=2&buyPage=15386&page=15386" target="_blank" rel="noopener noreferrer" class="btn-comprar">COMPRAR</a>
         </div>
       </section>
-      <script>
-        // Frases motivacionais rotativas para mobile
-        const frasesMobile = [
-          'Frustrada por não conseguir o tão desejado corpo?',
-          'Chega de treinos sem resultado!',
-          'Seu corpo, sua conquista!',
-          'Transforme sua rotina, transforme seu corpo!'
-        ];
-        let idxMobile = 0;
-        function rotateHeadlineMobile() {
-          const el = document.getElementById('headline-mobile');
-          if (!el) return;
-          el.textContent = frasesMobile[idxMobile];
-          idxMobile = (idxMobile + 1) % frasesMobile.length;
-        }
-        setInterval(rotateHeadlineMobile, 3000);
-        document.addEventListener('DOMContentLoaded', rotateHeadlineMobile);
-      </script>
+      <!-- JS da rotação de frases movido para script.js -->
 
       <section class="conteudo1" aria-label="Seção de conhecimentos e habilidades">
         <h2>Resultados Incríveis</h2>

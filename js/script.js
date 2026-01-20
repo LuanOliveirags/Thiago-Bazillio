@@ -1,3 +1,19 @@
+// ===== FRASES MOTIVACIONAIS ROTATIVAS PARA MOBILE (COMO FUNCIONA) =====
+const frasesMobile = [
+  'Frustrada por não conseguir o tão desejado corpo?',
+  'Chega de treinos sem resultado!',
+  'Seu corpo, sua conquista!',
+  'Transforme sua rotina, transforme seu corpo!'
+];
+let idxMobile = 0;
+function rotateHeadlineMobile() {
+  const el = document.getElementById('headline-mobile');
+  if (!el) return;
+  el.textContent = frasesMobile[idxMobile];
+  idxMobile = (idxMobile + 1) % frasesMobile.length;
+}
+setInterval(rotateHeadlineMobile, 3000);
+document.addEventListener('DOMContentLoaded', rotateHeadlineMobile);
 // ===== FRASES MOTIVACIONAIS ROTATIVAS =====
 const motivationalPhrases = [
   'Transforme seu corpo, sua energia e sua vida.',
