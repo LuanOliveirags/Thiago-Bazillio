@@ -326,3 +326,40 @@ document.querySelectorAll('.conteudo, .conteudo1').forEach(el => {
   el.style.transition = 'all 0.8s ease-out';
   observer.observe(el);
 });
+
+// ===== ESTILO DINÂMICO PARA BOTÕES DE COMPRA =====
+function styleAllBuyButtons() {
+  const style = document.createElement('style');
+  style.innerHTML = `
+    .btn-comprar {
+      font-size: 1.5rem !important;
+      font-weight: bold !important;
+      padding: 18px 64px !important;
+      border-radius: 16px !important;
+      background: linear-gradient(90deg, #ff2e6e 60%, #00ffd0 100%) !important;
+      color: #fff !important;
+      border: none !important;
+      box-shadow: 0 0 24px 4px #ff2e6e55, 0 0 32px 8px #00ffd055 !important;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.2s, filter 0.2s !important;
+      letter-spacing: 1px !important;
+      text-shadow: 0 2px 8px #0008 !important;
+      cursor: pointer !important;
+      animation: destaque-btn-pop 2.5s infinite alternate !important;
+      filter: brightness(1.08) drop-shadow(0 0 12px #ff2e6e88) !important;
+      display: inline-block !important;
+    }
+    .btn-comprar:hover {
+      background: linear-gradient(90deg, #00ffd0 60%, #ff2e6e 100%) !important;
+      color: #181c2f !important;
+      transform: scale(1.07) !important;
+      box-shadow: 0 8px 32px #00ffd088, 0 4px 16px #ff2e6e88 !important;
+      filter: brightness(1.18) drop-shadow(0 0 18px #00ffd0) !important;
+    }
+    @keyframes destaque-btn-pop {
+      0% { filter: brightness(1); }
+      100% { filter: brightness(1.18) drop-shadow(0 0 12px #ff2e6e); }
+    }
+  `;
+  document.head.appendChild(style);
+}
+window.addEventListener('DOMContentLoaded', styleAllBuyButtons);
