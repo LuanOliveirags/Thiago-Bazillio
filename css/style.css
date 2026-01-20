@@ -121,7 +121,7 @@
 }
 .destaque-titulo {
   color: #ff2e6e;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: bold;
   font-style: italic;
@@ -142,7 +142,7 @@
   display: inline-block;
   background: linear-gradient(90deg, #27ae60 60%, #00ffd0 100%);
   color: #fff;
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: bold;
   font-style: italic;
@@ -166,7 +166,7 @@
   justify-content: center;
 }
 .destaque-btn-wrap .btn-comprar {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: bold;
   padding: 18px 64px;
   border-radius: 16px;
@@ -210,7 +210,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
 /* ===== COMO FUNCIONA ===== */
 .como-title {
   color: #ff2e6e;
-  font-size: 4.2rem;
+  font-size: 3.6rem;
   text-align: center;
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 900;
@@ -226,7 +226,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
   text-align: center;
   color: #00ffd0;
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   margin-top: 0.5em;
   margin-bottom: 0.2em;
   font-weight: 800;
@@ -238,7 +238,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
   text-align: center;
   color: #00ffd0;
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 2.2rem;
+  font-size: 1.9rem;
   margin-top: 1.2em;
   font-weight: 700;
   text-shadow: 0 2px 12px #000, 0 0 8px #00ffd099;
@@ -248,7 +248,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
 .como-desc {
   text-align: center;
   font-style: italic;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   margin-top: 1.5em;
   color: #fff;
   max-width: 700px;
@@ -268,7 +268,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
 }
 .como-protocolo {
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   margin-top: 1.2em;
   color: #fff;
   max-width: 700px;
@@ -290,7 +290,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
 .btn-comprar {
   background: linear-gradient(90deg, #ff2e6e 60%, #00ffd0 100%);
   color: #fff;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: bold;
   padding: 20px 70px;
@@ -365,7 +365,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
 }
 .faq-title {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   color: #ff2e6e;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 32px;
@@ -394,7 +394,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #fff;
   padding: 28px 32px;
@@ -418,7 +418,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
   color: #ff2e6e;
 }
 .faq-a {
-  font-size: 1.13rem;
+  font-size: 1.05rem;
   color: #e0e0e0;
   background: #191b2a;
   padding: 22px 32px 28px 56px;
@@ -813,7 +813,7 @@ section.module.parallax-1 {
 }
 
 section.module.parallax-1 h2 {
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: 300;
   letter-spacing: 3px;
   z-index: 10;
@@ -824,7 +824,7 @@ section.module.parallax-1 h2 {
 
 section.module.parallax-1 h4 {
   color: var(--primary);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 300;
   z-index: 10;
   animation: slideInUp 1s ease-out 0.3s both;
@@ -849,7 +849,7 @@ section.module.parallax-2 blockquote {
 
 section.module.parallax-2 h3 {
   color: var(--primary);
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 400;
   z-index: 10;
   animation: fadeInScale 1s ease-out;
@@ -990,7 +990,7 @@ section.module.parallax-2 h4 {
 }
 
 .conteudo1 h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 60px;
   position: relative;
   z-index: 2;
@@ -1185,7 +1185,7 @@ section.module.parallax-2 h4 {
 }
 
 .motivation-text {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 2;
   margin: 40px auto;
   max-width: 800px;
