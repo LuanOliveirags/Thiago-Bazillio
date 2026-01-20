@@ -310,23 +310,25 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
   --primary: #ff2e6e;
   --primary-dark: #c30052;
   --accent: #00ffd0;
-  --background: linear-gradient(120deg, #0f2027 0%, #2c5364 100%);
-  --dark: #181c2f;
-  --light: #f7f7fa;
-  --gray: #bfc9d1;
-  --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --scrollbar-width: 10px;
-  --card-bg: rgba(255,255,255,0.07);
-  --card-border: #ff2e6e44;
-  --card-shadow: 0 4px 32px 0 #ff2e6e22;
-  --text-title: #ff2e6e;
-  --text-sub: #00ffd0;
-  --text-main: #f7f7fa;
-  --text-dark: #181c2f;
-  --button-hover: #c30052;
-}
-
-* {
+  .skill-card {
+    width: 98vw;
+    max-width: 340px;
+    height: 48vw;
+    max-height: 340px;
+    min-height: 180px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .skill-full {
+    width: 100%;
+    height: 100%;
+    min-height: 140px;
+    max-height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -679,13 +681,15 @@ section.module.parallax-2 h4 {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
+  .modal-icon {
+    width: 90vw !important;
+    height: auto !important;
+    max-width: 380px !important;
+    max-height: 70vh !important;
+    margin-bottom: 10px;
+    display: block;
+    object-fit: contain;
+    border-radius: 12px;
   }
   to {
     opacity: 1;
