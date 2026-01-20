@@ -1,3 +1,105 @@
+/* Ajuste mensagem de boas-vindas para centralizar e responsivo */
+.welcome-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #ff2e6e, #00f7ff);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 14px 32px;
+  border-radius: 30px;
+  box-shadow: 0 4px 24px #0005;
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.7s;
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 1px;
+  max-width: 90vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .welcome-message {
+    font-size: 1rem;
+    padding: 10px 10px;
+    max-width: 98vw;
+  }
+}
+
+/* Ajuste sobre-thiago para mobile */
+@media (max-width: 768px) {
+  .sobre-thiago-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 10px;
+    text-align: center;
+  }
+  .sobre-thiago-img {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 10px;
+  }
+  .sobre-thiago-nome {
+    font-size: 1.5rem;
+  }
+  .sobre-thiago-desc {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-thiago-box {
+    padding: 12px 2vw;
+    gap: 10px;
+  }
+  .sobre-thiago-img {
+    width: 110px;
+    height: 110px;
+  }
+  .sobre-thiago-nome {
+    font-size: 1.1rem;
+  }
+  .sobre-thiago-desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* Ajuste skill-full para garantir preenchimento total no mobile */
+@media (max-width: 480px) {
+  .skill-full {
+    width: 100%;
+    height: 100px;
+    min-height: 90px;
+    max-height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  }
+  .skill-card {
+    width: 110px;
+    height: 140px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Modal: garantir imagem grande e centralizada no mobile */
+@media (max-width: 480px) {
+  .modal-icon {
+    width: 120px !important;
+    height: 120px !important;
+    margin-bottom: 10px;
+    display: block;
+    object-fit: cover;
+  }
+}
 /* ===== DESTAQUE PRODUTO ===== */
 .destaque-produto {
   /* Fundo removido conforme solicitado */
@@ -785,11 +887,33 @@ section.module.parallax-2 h4 {
 
 .skill-full {
   width: 100%;
-  height: 200px;
+  height: 100%;
+  min-height: 180px;
+  max-height: 320px;
   object-fit: cover;
   display: block;
   border-radius: 12px;
   box-sizing: border-box;
+}
+
+.skill-card {
+  padding: 0;
+  width: 220px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .skill-card {
+    width: 180px;
+    height: 220px;
+  }
+  .skill-full {
+    min-height: 140px;
+    max-height: 220px;
+  }
 }
 
 @media (max-width: 768px) {

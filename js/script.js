@@ -46,24 +46,8 @@ window.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('DOMContentLoaded', function() {
   setTimeout(function() {
     const welcome = document.createElement('div');
+    welcome.className = 'welcome-message';
     welcome.textContent = 'Bem-vinda! Prepare-se para transformar seu corpo!';
-    welcome.style.cssText = `
-      position: fixed;
-      top: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(90deg, #ff2e6e, #00f7ff);
-      color: #fff;
-      font-size: 1.2rem;
-      padding: 14px 32px;
-      border-radius: 30px;
-      box-shadow: 0 4px 24px #0005;
-      z-index: 2000;
-      opacity: 0;
-      transition: opacity 0.7s;
-      font-family: 'Montserrat', Arial, sans-serif;
-      letter-spacing: 1px;
-    `;
     document.body.appendChild(welcome);
     setTimeout(() => { welcome.style.opacity = 1; }, 100);
     setTimeout(() => { welcome.style.opacity = 0; }, 3500);
