@@ -1,3 +1,47 @@
+// ===== DESTAQUE ANIMADO PARA PROTOCOLO E PREÇO =====
+window.addEventListener('DOMContentLoaded', function() {
+  const titulo = document.querySelector('.destaque-titulo');
+  const preco = document.querySelector('.destaque-preco');
+  if (titulo && preco) {
+    // Adiciona animação de brilho
+    titulo.style.transition = 'box-shadow 0.7s, color 0.7s';
+    preco.style.transition = 'box-shadow 0.7s, color 0.7s';
+    setInterval(() => {
+      titulo.style.boxShadow = '0 0 32px 8px #ff2e6e88, 0 0 8px 2px #00f7ff88';
+      titulo.style.color = '#fff';
+      preco.style.boxShadow = '0 0 24px 6px #00f7ff88, 0 0 8px 2px #ff2e6e88';
+      preco.style.color = '#fff';
+      setTimeout(() => {
+        titulo.style.boxShadow = '';
+        titulo.style.color = '#ff2e6e';
+        preco.style.boxShadow = '';
+        preco.style.color = '#fff';
+      }, 900);
+    }, 3500);
+    // Efeito de shake leve ao passar o mouse
+    [titulo, preco].forEach(el => {
+      el.addEventListener('mouseenter', function() {
+        this.style.animation = 'shake-protocolo 0.5s';
+      });
+      el.addEventListener('mouseleave', function() {
+        this.style.animation = '';
+      });
+    });
+    // Adiciona o CSS da animação shake
+    const shakeStyle = document.createElement('style');
+    shakeStyle.textContent = `
+      @keyframes shake-protocolo {
+        0% { transform: translateX(0); }
+        20% { transform: translateX(-6px); }
+        40% { transform: translateX(6px); }
+        60% { transform: translateX(-4px); }
+        80% { transform: translateX(4px); }
+        100% { transform: translateX(0); }
+      }
+    `;
+    document.head.appendChild(shakeStyle);
+  }
+});
 // ===== MENSAGEM DE BOAS-VINDAS ANIMADA =====
 window.addEventListener('DOMContentLoaded', function() {
   setTimeout(function() {
