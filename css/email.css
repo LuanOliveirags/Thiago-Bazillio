@@ -66,18 +66,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* ===== HEADER E NAVEGAÇÃO ===== */
 header.header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #181c2f 60%, #ff2e6e 100%);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 247, 255, 0.1);
-    z-index: 1000;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.85));
+  background: linear-gradient(90deg, rgba(24, 28, 47, 0.75) 60%, rgba(255, 46, 110, 0.75) 100%);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 247, 255, 0.1);
   z-index: 1000;
