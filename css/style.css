@@ -210,7 +210,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
 /* ===== COMO FUNCIONA ===== */
 .como-title {
   color: #ff2e6e;
-  font-size: 3.1rem;
+  font-size: 2.5rem;
   text-align: center;
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 900;
@@ -226,7 +226,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
   text-align: center;
   color: #00ffd0;
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-top: 0.5em;
   margin-bottom: 0.2em;
   font-weight: 800;
@@ -238,7 +238,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
   text-align: center;
   color: #00ffd0;
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   margin-top: 1.2em;
   font-weight: 700;
   text-shadow: 0 2px 12px #000, 0 0 8px #00ffd099;
@@ -268,7 +268,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
 }
 .como-protocolo {
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.90rem;
   margin-top: 1.2em;
   color: #fff;
   max-width: 700px;
