@@ -36,7 +36,7 @@ function rotateMotivationalPhrase() {
 
 window.addEventListener('DOMContentLoaded', rotateMotivationalPhrase);
 
-// ===== EFEITO DE PARTÍCULAS NO FUNDO =====
+// ===== EFEITO DE PARTÍCULAS MELHORADO NO FUNDO =====
 function createParticles() {
   const particlesContainer = document.createElement('div');
   particlesContainer.className = 'particles-bg';
@@ -52,34 +52,110 @@ function createParticles() {
   });
   document.body.appendChild(particlesContainer);
 
-  for (let i = 0; i < 36; i++) {
+  // Criar mais partículas com diferentes tamanhos
+  const particleCount = 50;
+  const particles = [];
+  
+  for (let i = 0; i < particleCount; i++) {
     const particle = document.createElement('div');
     particle.className = 'particle';
-    const size = Math.random() * 8 + 4;
+    const size = Math.random() * 12 + 3;
+    const initialX = Math.random() * 100;
+    const initialY = Math.random() * 100;
+    const speed = Math.random() * 40 + 20; // segundos para completar animação
+    const delay = Math.random() * 5;
+    
+    // Cor aleatória entre cyan e rosa
+    const colorChoice = Math.random();
+    let gradient;
+    if (colorChoice < 0.33) {
+      gradient = 'radial-gradient(circle, #00ffd0, rgba(0, 255, 208, 0))';
+    } else if (colorChoice < 0.66) {
+      gradient = 'radial-gradient(circle, #ff2e6e, rgba(255, 46, 110, 0))';
+    } else {
+      gradient = 'radial-gradient(circle, rgba(0, 255, 208, 0.8), rgba(255, 46, 110, 0.2))';
+    }
+    
     Object.assign(particle.style, {
       position: 'absolute',
       width: `${size}px`,
       height: `${size}px`,
       borderRadius: '50%',
-      background: 'linear-gradient(135deg, #00ffd0, #ff2e6e)',
-      opacity: Math.random() * 0.5 + 0.2,
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
-      filter: 'blur(0.5px)',
-      transition: 'all 1s',
+      background: gradient,
+      opacity: Math.random() * 0.6 + 0.2,
+      left: `${initialX}%`,
+      top: `${initialY}%`,
+      filter: `blur(${Math.random() * 2 + 0.5}px)`,
+      boxShadow: `0 0 ${size * 2}px ${colorChoice < 0.5 ? '#00ffd044' : '#ff2e6e44'}`,
+      animation: `float-particle ${speed}s ease-in-out ${delay}s infinite`,
     });
+    
     particlesContainer.appendChild(particle);
+    particles.push({
+      element: particle,
+      speedX: (Math.random() - 0.5) * 2,
+      speedY: (Math.random() - 0.5) * 2,
+      x: initialX,
+      y: initialY
+    });
   }
 
-  function animateParticles() {
-    const particles = particlesContainer.querySelectorAll('.particle');
-    particles.forEach(particle => {
-      particle.style.left = `${Math.random() * 100}%`;
-      particle.style.top = `${Math.random() * 100}%`;
-      particle.style.opacity = Math.random() * 0.5 + 0.2;
+  // Adicionar animação CSS
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes float-particle {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.3;
+      }
+      25% {
+        transform: translate(30px, -40px) scale(1.1);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translate(-20px, -80px) scale(0.9);
+        opacity: 0.4;
+      }
+      75% {
+        transform: translate(-40px, -40px) scale(1.05);
+        opacity: 0.7;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // Animação suave com requestAnimationFrame para melhor performance
+  let lastTime = Date.now();
+  
+  function smoothAnimate() {
+    const currentTime = Date.now();
+    const deltaTime = (currentTime - lastTime) / 1000;
+    lastTime = currentTime;
+    
+    particles.forEach((p, index) => {
+      // Movimento suave e contínuo
+      p.x += p.speedX * deltaTime * 5;
+      p.y += p.speedY * deltaTime * 5;
+      
+      // Bounce nas bordas
+      if (p.x <= 0 || p.x >= 100) p.speedX *= -1;
+      if (p.y <= 0 || p.y >= 100) p.speedY *= -1;
+      
+      // Manter dentro dos limites
+      p.x = Math.max(0, Math.min(100, p.x));
+      p.y = Math.max(0, Math.min(100, p.y));
+      
+      // Pequenas variações aleatórias na velocidade
+      if (Math.random() < 0.01) {
+        p.speedX += (Math.random() - 0.5) * 0.1;
+        p.speedY += (Math.random() - 0.5) * 0.1;
+      }
     });
+    
+    requestAnimationFrame(smoothAnimate);
   }
-  setInterval(animateParticles, 3500);
+  
+  smoothAnimate();
 }
 
 window.addEventListener('DOMContentLoaded', createParticles);
