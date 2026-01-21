@@ -219,7 +219,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
   letter-spacing: 3px;
   text-shadow: 0 4px 24px #000, 0 0 12px #ff2e6e99;
   filter: drop-shadow(0 0 12px #ff2e6e88);
-  animation: destaque-titulo-pop 2.5s infinite alternate;
+  /* animation: destaque-titulo-pop 0s infinite alternate; */
   line-height: 1.1;
 }
 .como-sub {
