@@ -210,12 +210,12 @@ h1, h2, h3, h4, h5, h6, p, a, span, details, summary, div, label, input, button 
 /* ===== COMO FUNCIONA ===== */
 .como-title {
   color: #ff2e6e;
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-align: center;
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 900;
   margin-bottom: 0.2em;
-  margin-top: 2.5em;
+  margin-top: 2em;
   letter-spacing: 3px;
   text-shadow: 0 4px 24px #000, 0 0 12px #ff2e6e99;
   filter: drop-shadow(0 0 12px #ff2e6e88);
